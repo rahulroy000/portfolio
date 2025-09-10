@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Syne:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+<body>
+<!--Head Section-->
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+<!--Main Section-->
+
+        <section id="about" class="about">
+            <div class="empty"></div>
+            <article>
+            <div class="title"><h1>Creative Developer</h1></div>
+            <div class="description">
+                <p>
+                    Hi, 👋 I&apos;m Rahul Roy — a Creative Developer and BCA student at OmDayal Group of Institutions.
+                    I first got into design during the pandemic. What started as a way to pass time quickly turned into something I genuinely love — creating visuals and experiences that connect with people.
+                    As I kept learning, I didn&apos;t stop at design. I picked up development too, and that&apos;s when I realized I could merge creativity with code to build projects that are both interactive and meaningful.
+                    These days, I focus on UI/UX, design thinking, and frontend development, always aiming to make my work not just look good but also feel smooth and practical. I&apos;m curious by nature, and I love bringing ideas to life — whether through design or through code. 
+                    My goal is to keep exploring creative coding and interactive design, and to keep growing as a versatile Creative Developer.
+                </p>
+            </div>
+            </article>
+        </section>
+
+        <section id="services" class="service service-html sticky">
+            <article>
+                <figure><img src="./img/Dimond.png" alt="Dimond" width="200px"></figure>
+                <div class="text">
+                    <h2>HTML</h2>
+                    <p id="html">
+                        <b>HTML (HyperText Markup Language)</b> is the core language of the web. It defines the structure and meaning of content on a webpage. 
+                        While <b><a href="#css">CSS</a></b> handles the design and appearance, and <b><a href="#javascript">JavaScript</a></b> adds functionality, 
+                        HTML is what gives the page its basic framework. The word <b>“Hypertext”</b> refers to links that connect one page to another, either inside the same website or across different websites. 
+                        These links are what make the web interactive and connected. By creating and linking content, you actively take part in building the World Wide Web.
+                    </p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">More about HTML</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="service service-css sticky">
+            <article>
+                <figure><img src="./img/Tringal.png" alt="Tringal" width="200px"></figure>
+                <div class="text">
+                    <h2>CSS</h2>
+                    <p id="css">
+                        <b>CSS (Cascading Style Sheets)</b> is a language used to style and design web pages written in <b><a href="#html">HTML</a></b> or XML (including formats like SVG, MathML, or XHTML). 
+                        It controls how elements look on screen, on paper, or in other media, defining colors, layouts, fonts, spacing, and more.CSS is one of the core technologies of the open web and is standardized by the <b><a href="https://www.w3.org/Style/CSS/#specs" target="_blank">W3C</a></b> so it works consistently across browsers. 
+                        Earlier, CSS had versions like <b>CSS1</b> and <b>CSS2</b>.1, and people often mention <b>CSS3</b>. But now, instead of new versions, CSS is developed in separate modules, each with its own updates — so it&apos;s simply called CSS.
+                    </p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">More about CSS</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="service service-js sticky">
+            <article>
+                <figure><img src="./img/Round Polygon.png" alt="Round Polygon" width="200px"></figure>
+                <div class="text">
+                    <h2>JS</h2>
+                    <p id="javascript">
+                        <b>JavaScript (JS)</b> is a lightweight, flexible programming language mainly used to add interactivity and functionality to web pages. 
+                        While it's best known as the language of the web, it's also used in other environments like <b><a href="https://nodejs.org/en" target="_blank">Node.js</a></b>, <b>CouchDB</b>, and even <b>Adobe Acrobat</b>. 
+                        JavaScript supports different styles of programming — <b>imperative, functional, and object-oriented</b>. It's dynamic in nature, meaning you can create objects at runtime, use flexible function parameters, and even generate or inspect code while it's running.
+                    </p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">More about JS</a>
+                </div>
+            </article>
+        </section>
+<!--Footer-->        
+        <section id="contact" class="contact full-screen">
+            <footer>
+                <a href="mailto:rahulroybca@gmail.com" target="_blank">rahulroybca@gmail.com</a>
+            </footer>
+        </section>
+
+        <script>
+
+            let emptyElement = document.querySelector('.about .empty');
+            let titleElement = document.querySelector('.about .title');
+
+            let figureElements = document.querySelectorAll('.service figure');
+
+
+            window.addEventListener( 'mousemove', handleMouseMove);
+
+            function handleMouseMove( event ) {
+
+                emptyElement.style.flexBasis = event.clientX + 'px';
+                titleElement.style.flexBasis = event.clientY / 2 + 'px';
+
+                figureElements.forEach( function( element ) {
+                    element.style.flexBasis = (window.innerWidth - event.clientX) + 'px';
+                } );
+            }
+
+        </script>
+
+</body>
+</html>
